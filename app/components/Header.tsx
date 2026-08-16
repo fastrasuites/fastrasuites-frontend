@@ -108,7 +108,11 @@ export default function Header() {
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((item) => {
-            const isActive = pathname === item.href || (item.href !== "/" && pathname?.startsWith(item.href) && !item.href.includes('#'));
+            const isActive =
+              pathname === item.href ||
+              (item.href !== "/" &&
+                pathname?.startsWith(item.href) &&
+                !item.href.includes("#"));
             return (
               <Link
                 key={item.name}
@@ -119,9 +123,11 @@ export default function Header() {
               >
                 {item.name}
                 {/* Subtle dynamic underline glow */}
-                <span className={`absolute bottom-0 left-0 h-[2px] bg-[#3b82f6] transition-all duration-200 ease-out rounded-full opacity-90 shadow-[0_0_8px_#3b82f6] ${
-                  isActive ? "w-full" : "w-0 group-hover:w-full"
-                }`} />
+                <span
+                  className={`absolute bottom-0 left-0 h-[2px] bg-[#3b82f6] transition-all duration-200 ease-out rounded-full opacity-90 shadow-[0_0_8px_#3b82f6] ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
               </Link>
             );
           })}
@@ -130,14 +136,14 @@ export default function Header() {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-4">
           <Link
-            href="#"
+            href="https://fastra-suite-new.vercel.app/"
             className="text-sm font-medium text-white hover:text-gray-200 transition-colors px-2 py-1 hover:opacity-90 active:scale-95"
           >
             Log in
           </Link>
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
             <Link
-              href="#signup"
+              href="https://fastra-suite-new.vercel.app/"
               className="inline-block bg-[#3b82f6] text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-600 transition-colors shadow-md shadow-blue-500/20 hover:shadow-blue-500/35"
             >
               Start Free Trial
@@ -148,7 +154,7 @@ export default function Header() {
         {/* Mobile Actions: CTA + Animated Hamburger */}
         <div className="flex md:hidden items-center gap-2.5">
           <Link
-            href="#signup"
+            href="https://fastra-suite-new.vercel.app/"
             onClick={() => setMobileMenuOpen(false)}
             className="bg-[#3b82f6] text-white text-xs font-bold px-3.5 py-2 rounded-lg hover:bg-blue-600 transition-colors shadow-xs"
           >
@@ -163,23 +169,23 @@ export default function Header() {
           >
             <motion.span
               animate={
-                mobileMenuOpen
-                  ? { rotate: 45, y: 7.5 }
-                  : { rotate: 0, y: 0 }
+                mobileMenuOpen ? { rotate: 45, y: 7.5 } : { rotate: 0, y: 0 }
               }
               transition={{ duration: 0.25 }}
               className="w-5 h-[2px] bg-white rounded-full origin-center"
             />
             <motion.span
-              animate={mobileMenuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+              animate={
+                mobileMenuOpen
+                  ? { opacity: 0, scaleX: 0 }
+                  : { opacity: 1, scaleX: 1 }
+              }
               transition={{ duration: 0.2 }}
               className="w-5 h-[2px] bg-white rounded-full"
             />
             <motion.span
               animate={
-                mobileMenuOpen
-                  ? { rotate: -45, y: -7.5 }
-                  : { rotate: 0, y: 0 }
+                mobileMenuOpen ? { rotate: -45, y: -7.5 } : { rotate: 0, y: 0 }
               }
               transition={{ duration: 0.25 }}
               className="w-5 h-[2px] bg-white rounded-full origin-center"
@@ -204,14 +210,20 @@ export default function Header() {
                 Navigation
               </span>
               {NAV_LINKS.map((item) => {
-                const isActive = pathname === item.href || (item.href !== "/" && pathname?.startsWith(item.href) && !item.href.includes('#'));
+                const isActive =
+                  pathname === item.href ||
+                  (item.href !== "/" &&
+                    pathname?.startsWith(item.href) &&
+                    !item.href.includes("#"));
                 return (
                   <motion.div key={item.name} variants={linkVariants}>
                     <Link
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={`flex items-center justify-between text-[17px] font-medium px-3 py-3.5 rounded-xl transition-all active:scale-[0.98] ${
-                        isActive ? "text-white bg-white/10" : "text-gray-200 hover:text-white hover:bg-white/5"
+                        isActive
+                          ? "text-white bg-white/10"
+                          : "text-gray-200 hover:text-white hover:bg-white/5"
                       }`}
                     >
                       <span>{item.name}</span>
@@ -235,16 +247,19 @@ export default function Header() {
             </div>
 
             {/* Mobile Bottom Actions */}
-            <motion.div variants={linkVariants} className="flex flex-col gap-3 pt-8 border-t border-white/10 mt-6">
+            <motion.div
+              variants={linkVariants}
+              className="flex flex-col gap-3 pt-8 border-t border-white/10 mt-6"
+            >
               <Link
-                href="#"
+                href="https://fastra-suite-new.vercel.app/"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center text-sm font-semibold text-gray-300 hover:text-white py-3 rounded-xl border border-white/15 bg-white/5 active:scale-[0.98] transition-all"
               >
                 Log in
               </Link>
               <Link
-                href="#signup"
+                href="https://fastra-suite-new.vercel.app/"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center text-sm font-bold text-white bg-[#3b82f6] hover:bg-blue-600 py-3.5 rounded-xl shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-all"
               >

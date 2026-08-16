@@ -141,8 +141,8 @@ export default function Footer() {
             </span>
             <ul className="flex flex-col gap-2.5 sm:gap-3 text-xs md:text-sm text-gray-400 font-medium">
               {[
-                { name: "Start Free Trial", href: "#signup" },
-                { name: "Book a Demo", href: "#demo" },
+                { name: "Start Free Trial", href: "https://fastra-suite-new.vercel.app/" },
+                { name: "Book a Demo", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="hover:text-white hover:translate-x-1 inline-block transition-all">

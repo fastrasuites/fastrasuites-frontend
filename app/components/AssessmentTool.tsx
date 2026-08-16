@@ -257,8 +257,8 @@ export default function AssessmentTool() {
                 <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
                   <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
                     <Link
-                      href="#signup"
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 bg-[#3B7CED] hover:bg-blue-600 text-white font-medium text-[14px] px-6 py-3 sm:py-2.5 rounded-xl shadow-xs transition-colors cursor-pointer text-center"
+                      href="https://fastra-suite-new.vercel.app/"
+                      className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-[15px] hover:bg-gray-50 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
                     >
                       Start Free Trial
                       <svg

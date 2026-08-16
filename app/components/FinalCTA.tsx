@@ -44,8 +44,8 @@ export default function FinalCTA() {
             className="w-full sm:w-auto"
           >
             <Link
-              href="#signup"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-[#4285F4] hover:bg-[#3367D6] text-white font-medium text-[14.5px] sm:text-[15px] px-8 py-3.5 sm:py-4 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/45 transition-all duration-200 cursor-pointer text-center"
+              href="https://fastra-suite-new.vercel.app/"
+              className="inline-flex items-center justify-center gap-2 bg-[#3b82f6] text-white px-8 py-4 rounded-xl font-semibold text-[16px] hover:bg-blue-600 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all group"
             >
               Start Your Free 14-Day Trial
             </Link>

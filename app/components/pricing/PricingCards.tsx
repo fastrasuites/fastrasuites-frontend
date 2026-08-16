@@ -49,8 +49,8 @@ export default function PricingCards() {
               className="w-full mb-10"
             >
               <Link
-                href="#signup"
-                className="w-full flex items-center justify-center bg-[#4285F4] hover:bg-[#3367D6] text-white font-medium text-[15px] px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-200"
+                href="https://fastra-suite-new.vercel.app/"
+                className="inline-block w-full py-3.5 px-6 rounded-xl text-[15px] font-semibold text-center bg-[#4285F4] text-white hover:bg-[#3367D6] shadow-md hover:shadow-lg hover:shadow-blue-500/20 transition-all active:scale-[0.98]"
               >
                 Start Free 14-Day Trial
               </Link>

@@ -13,8 +13,6 @@ export const metadata: Metadata = {
   description: "Budget costing, purchase requests, and live spend tracking for field and project teams.",
 };
 
-import ComingSoonModal from "./components/ComingSoonModal";
-
 export default function RootLayout({
   children,
 }: {
@@ -28,7 +26,6 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>
         {children}
-        <ComingSoonModal />
       </body>
     </html>
   );
