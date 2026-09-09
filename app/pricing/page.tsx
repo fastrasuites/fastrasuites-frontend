@@ -4,13 +4,15 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PricingHero from "../components/pricing/PricingHero";
 import PricingCards from "../components/pricing/PricingCards";
-import PricingCTA from "../components/pricing/PricingCTA";
+import PricingEveryPlan from "../components/pricing/PricingEveryPlan";
+import PricingAdvisor from "../components/pricing/PricingAdvisor";
+import PricingAnnualSavings from "../components/pricing/PricingAnnualSavings";
 import PricingComparisonTable from "../components/pricing/PricingComparisonTable";
-import PricingFAQ from "../components/pricing/PricingFAQ";
 
 export const metadata = {
   title: "Pricing | FastraSuite",
-  description: "Two ways to run FastraSuite, both cover the full spending loop. Start free for 14 days, no card required.",
+  description:
+    "Two ways to run FastraSuite, both cover the full spending loop. Simple, transparent pricing that scales with your business.",
 };
 
 export default function PricingPage() {
@@ -20,9 +22,10 @@ export default function PricingPage() {
       <main className="min-h-screen bg-white">
         <PricingHero />
         <PricingCards />
-        <PricingCTA />
+        <PricingEveryPlan />
+        <PricingAdvisor />
+        <PricingAnnualSavings />
         <PricingComparisonTable />
-        <PricingFAQ />
       </main>
       <Footer />
     </SmoothScrollProvider>
