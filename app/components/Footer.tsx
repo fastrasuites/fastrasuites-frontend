@@ -141,11 +141,16 @@ export default function Footer() {
             </span>
             <ul className="flex flex-col gap-2.5 sm:gap-3 text-xs md:text-sm text-gray-400 font-medium">
               {[
-                { name: "Start Free Trial", href: "https://fastra-suite-new.vercel.app/" },
+                { name: "Start Free Trial", href: "https://app.fastrasuite.com/" },
                 { name: "Book a Demo", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="hover:text-white hover:translate-x-1 inline-block transition-all">
+                  <Link
+                    href={link.href}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="hover:text-white hover:translate-x-1 inline-block transition-all"
+                  >
                     {link.name}
                   </Link>
                 </li>

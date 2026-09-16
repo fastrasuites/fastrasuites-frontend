@@ -11,13 +11,13 @@ export default function PricingAdvisor() {
       title: "Managing a single project with a small team?",
       desc: "The Starter plan gives you all the core spend controls you need to manage budgets, track expenses, and approve spending for one active project without unnecessary complexity.",
       linkText: "Read on to find out",
-      href: "https://fastra-suite-new.vercel.app/",
+      href: "https://app.fastrasuite.com/",
     },
     {
       title: "Managing multiple projects and direct costs?",
       desc: "Professional is designed for growing contractors and businesses running up to 5 sites with multi-level approval hierarchies, inventory tracking, and direct costing.",
       linkText: "Read on to find out",
-      href: "https://fastra-suite-new.vercel.app/",
+      href: "/contact",
     },
     {
       title: "Managing a large organization with complex operations?",
@@ -58,6 +58,8 @@ export default function PricingAdvisor() {
               <div>
                 <Link
                   href={item.href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="text-[#2563EB] font-semibold text-sm hover:underline inline-flex items-center gap-1 group"
                 >
                   <span>{item.linkText}</span>

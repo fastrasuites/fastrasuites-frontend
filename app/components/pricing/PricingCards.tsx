@@ -185,7 +185,9 @@ export default function PricingCards() {
 
               <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}>
                 <Link
-                  href="https://fastra-suite-new.vercel.app/"
+                  href="https://app.fastrasuite.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full py-3.5 px-4 rounded-xl text-[14.5px] font-semibold text-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white transition-all shadow-md shadow-blue-500/20 active:scale-[0.98] mb-8"
                 >
                   Start Free 14-Day Trial
@@ -214,9 +216,9 @@ export default function PricingCards() {
               transition={{ duration: 0.25, ease: EASING.smooth }}
               className="bg-white rounded-[28px] p-7 sm:p-8 flex flex-col h-full border border-[#2563EB] shadow-lg shadow-blue-500/10 hover:shadow-2xl hover:shadow-blue-500/20 transition-all relative"
             >
-              {/* Most Popular Badge */}
-              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#2563EB] text-white text-[11px] font-bold px-4 py-1 rounded-full shadow-md tracking-wider">
-                Most Popular
+              {/* Coming Soon Badge */}
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#2563EB] text-white text-[11px] font-bold px-4 py-1 rounded-full shadow-md tracking-wider uppercase">
+                Coming Soon
               </div>
 
               <h3 className="text-xl font-bold text-[#111827] mb-1 mt-1">Professional</h3>
@@ -245,10 +247,10 @@ export default function PricingCards() {
 
               <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}>
                 <Link
-                  href="https://fastra-suite-new.vercel.app/"
+                  href="/contact"
                   className="block w-full py-3.5 px-4 rounded-xl text-[14.5px] font-semibold text-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white transition-all shadow-md shadow-blue-500/30 hover:shadow-blue-500/50 active:scale-[0.98] mb-8"
                 >
-                  Start Free 14-Day Trial
+                  Coming Soon
                 </Link>
               </motion.div>
 
@@ -274,7 +276,12 @@ export default function PricingCards() {
               transition={{ duration: 0.25, ease: EASING.smooth }}
               className="bg-white rounded-[28px] p-7 sm:p-8 flex flex-col h-full border border-gray-200/90 shadow-sm hover:shadow-xl hover:border-gray-300 transition-all relative"
             >
-              <h3 className="text-xl font-bold text-[#111827] mb-1">Enterprise</h3>
+              {/* Coming Soon Badge */}
+              <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#2563EB] text-white text-[11px] font-bold px-4 py-1 rounded-full shadow-md tracking-wider uppercase">
+                Coming Soon
+              </div>
+
+              <h3 className="text-xl font-bold text-[#111827] mb-1 mt-1">Enterprise</h3>
               <p className="text-gray-500 text-[13px] leading-relaxed mb-6 min-h-[38px]">
                 For large contractors and organizations with complex project operations
               </p>
@@ -303,7 +310,7 @@ export default function PricingCards() {
                   href="/contact"
                   className="block w-full py-3.5 px-4 rounded-xl text-[14.5px] font-semibold text-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white transition-all shadow-md shadow-blue-500/20 active:scale-[0.98] mb-8"
                 >
-                  Contact Us
+                  Coming Soon
                 </Link>
               </motion.div>
 

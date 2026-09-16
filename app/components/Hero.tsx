@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   motion,
   useMotionValue,
@@ -212,32 +213,44 @@ export default function Hero() {
 
           {/* Buttons: Full Width on Mobile, Original Style on Desktop */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 w-full sm:w-auto">
-            <motion.button
+            <motion.div
               whileHover={{ scale: 1.025, y: -1 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto bg-[#3b82f6] text-white font-extrabold text-[14.5px] sm:text-[15px] px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl sm:rounded-lg hover:bg-blue-600 transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 cursor-pointer text-center"
+              className="w-full sm:w-auto"
             >
-              Start Free 14-Day Trial
-              <svg
-                className="w-4 h-4 stroke-[3] transition-transform group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+              <Link
+                href="https://app.fastrasuite.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto bg-[#3b82f6] text-white font-extrabold text-[14.5px] sm:text-[15px] px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl sm:rounded-lg hover:bg-blue-600 transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 cursor-pointer text-center group"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </motion.button>
-            <motion.button
+                Start Free 14-Day Trial
+                <svg
+                  className="w-4 h-4 stroke-[3] transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </Link>
+            </motion.div>
+            <motion.div
               whileHover={{ scale: 1.025, y: -1 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full sm:w-auto border border-white/25 hover:border-white/50 text-white font-extrabold text-[14.5px] sm:text-[15px] px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl sm:rounded-lg bg-black/10 hover:bg-white/5 transition-all cursor-pointer text-center"
+              className="w-full sm:w-auto"
             >
-              Book a 15-Minute Demo
-            </motion.button>
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto border border-white/25 hover:border-white/50 text-white font-extrabold text-[14.5px] sm:text-[15px] px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl sm:rounded-lg bg-black/10 hover:bg-white/5 transition-all cursor-pointer text-center flex items-center justify-center"
+              >
+                Book a 15-Minute Demo
+              </Link>
+            </motion.div>
           </motion.div>
         </motion.div>
 

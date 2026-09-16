@@ -11,6 +11,15 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "FastraSuite - The operating system for project-based businesses",
   description: "Budget costing, purchase requests, and live spend tracking for field and project teams.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
