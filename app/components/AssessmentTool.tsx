@@ -258,8 +258,6 @@ export default function AssessmentTool() {
                   <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
                     <Link
                       href="https://app.fastrasuite.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-[15px] hover:bg-gray-50 shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
                     >
                       Start Free Trial

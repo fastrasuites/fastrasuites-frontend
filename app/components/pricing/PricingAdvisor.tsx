@@ -58,8 +58,6 @@ export default function PricingAdvisor() {
               <div>
                 <Link
                   href={item.href}
-                  target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="text-[#2563EB] font-semibold text-sm hover:underline inline-flex items-center gap-1 group"
                 >
                   <span>{item.linkText}</span>

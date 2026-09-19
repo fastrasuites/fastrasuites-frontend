@@ -59,8 +59,6 @@ export default function PricingCTA() {
           >
             <Link
               href="https://app.fastrasuite.com/"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#3b82f6] text-white px-8 py-4 rounded-xl font-semibold text-[16px] hover:bg-blue-600 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all group"
             >
               Start Your Free 14-Day Trial

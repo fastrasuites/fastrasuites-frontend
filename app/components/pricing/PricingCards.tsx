@@ -186,8 +186,6 @@ export default function PricingCards() {
               <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}>
                 <Link
                   href="https://app.fastrasuite.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="block w-full py-3.5 px-4 rounded-xl text-[14.5px] font-semibold text-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white transition-all shadow-md shadow-blue-500/20 active:scale-[0.98] mb-8"
                 >
                   Start Free 14-Day Trial

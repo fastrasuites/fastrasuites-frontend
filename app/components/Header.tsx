@@ -137,8 +137,6 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="https://app.fastrasuite.com/"
-            target="_blank"
-            rel="noopener noreferrer"
             className="text-sm font-medium text-white hover:text-gray-200 transition-colors px-2 py-1 hover:opacity-90 active:scale-95"
           >
             Log in
@@ -146,8 +144,6 @@ export default function Header() {
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
             <Link
               href="https://app.fastrasuite.com/"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-block bg-[#3b82f6] text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-600 transition-colors shadow-md shadow-blue-500/20 hover:shadow-blue-500/35"
             >
               Start Free Trial
@@ -159,8 +155,6 @@ export default function Header() {
         <div className="flex md:hidden items-center gap-2.5">
           <Link
             href="https://app.fastrasuite.com/"
-            target="_blank"
-            rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}
             className="bg-[#3b82f6] text-white text-xs font-bold px-3.5 py-2 rounded-lg hover:bg-blue-600 transition-colors shadow-xs"
           >
@@ -259,8 +253,6 @@ export default function Header() {
             >
               <Link
                 href="https://app.fastrasuite.com/"
-                target="_blank"
-                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center text-sm font-semibold text-gray-300 hover:text-white py-3 rounded-xl border border-white/15 bg-white/5 active:scale-[0.98] transition-all"
               >
@@ -268,8 +260,6 @@ export default function Header() {
               </Link>
               <Link
                 href="https://app.fastrasuite.com/"
-                target="_blank"
-                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full text-center text-sm font-bold text-white bg-[#3b82f6] hover:bg-blue-600 py-3.5 rounded-xl shadow-lg shadow-blue-500/25 active:scale-[0.98] transition-all"
               >

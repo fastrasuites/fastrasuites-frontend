@@ -147,8 +147,6 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    target={link.href.startsWith("http") ? "_blank" : undefined}
-                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className="hover:text-white hover:translate-x-1 inline-block transition-all"
                   >
                     {link.name}

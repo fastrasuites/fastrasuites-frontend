@@ -220,8 +220,6 @@ export default function Hero() {
             >
               <Link
                 href="https://app.fastrasuite.com/"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="w-full sm:w-auto bg-[#3b82f6] text-white font-extrabold text-[14.5px] sm:text-[15px] px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl sm:rounded-lg hover:bg-blue-600 transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 cursor-pointer text-center group"
               >
                 Start Free 14-Day Trial
