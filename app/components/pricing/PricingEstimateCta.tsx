@@ -15,8 +15,8 @@ const points = [
 export default function PricingEstimateCta({
   href = "/estimate",
   eyebrow = "Free tool",
-  title = "Not sure which plan fits your project?",
-  description = "Use our Nigerian Estimation Engine to get a cost estimate for your project in minutes, then pick the plan that matches your scale.",
+  title = "Project cost estimator",
+  description = "Get a realistic budget built on current Nigerian material and labour prices, then choose the plan that fits the size of your work.",
   ctaLabel = "Get your estimate",
 }: Props) {
   return (
