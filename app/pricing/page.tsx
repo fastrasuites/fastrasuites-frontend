@@ -8,6 +8,8 @@ import PricingEveryPlan from "../components/pricing/PricingEveryPlan";
 import PricingAdvisor from "../components/pricing/PricingAdvisor";
 import PricingAnnualSavings from "../components/pricing/PricingAnnualSavings";
 import PricingComparisonTable from "../components/pricing/PricingComparisonTable";
+import PricingEstimateCta from "../components/pricing/PricingEstimateCta";
+import PricingEstimateBanner from "../components/pricing/PricingEstimateBanner";
 
 export const metadata = {
   title: "Pricing | FastraSuite",
@@ -25,7 +27,9 @@ export default function PricingPage() {
         <PricingEveryPlan />
         <PricingAdvisor />
         <PricingAnnualSavings />
+        <PricingEstimateBanner />
         <PricingComparisonTable />
+        <PricingEstimateCta />
       </main>
       <Footer />
     </SmoothScrollProvider>
