@@ -372,25 +372,25 @@ export default function EstimatePage() {
   ];
 
   return (
-    <section
-      className="mx-auto w-full max-w-6xl px-4 py-8 sm:py-12"
-      aria-labelledby="nmpe-title"
-    >
+        <section
+          className="mx-auto w-full max-w-6xl px-4 pt-[80px] py-8 sm:py-12"
+          aria-labelledby="nmpe-title"
+        >
           {!showResults && (
             <>
-              <header className="mb-6 overflow-hidden rounded-2xl bg-charcoal-900 text-white shadow-card">
+              <header className="mb-6 overflow-hidden rounded-2xl bg-[#0c1524] text-white shadow-card">
                 <div className="relative px-5 py-7 sm:px-8 sm:py-9">
                   <div
                     className="pointer-events-none absolute inset-0 opacity-[.07]"
                     style={{
                       backgroundImage:
-                        "repeating-linear-gradient(45deg,#F97316 0 12px,transparent 12px 24px)",
+                        "repeating-linear-gradient(45deg,#3b82f6 0 12px,transparent 12px 24px)",
                     }}
                   />
                   <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                     <div>
-                      <span className="inline-flex items-center gap-2 rounded-full bg-brand-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-400">
-                        <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />{" "}
+                      <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400">
+                        <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />{" "}
                         2026 Nigerian Market Benchmarks
                       </span>
                       <h1
@@ -435,7 +435,7 @@ export default function EstimatePage() {
                         htmlFor="nmpe-location"
                         className="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-700"
                       >
-                        <span className="grid h-5 w-5 place-items-center rounded bg-charcoal-900 text-[11px] font-bold text-white">
+                        <span className="grid h-5 w-5 place-items-center rounded bg-[#0c1524] text-[11px] font-bold text-white">
                           1
                         </span>{" "}
                         Project location
@@ -445,7 +445,7 @@ export default function EstimatePage() {
                           id="nmpe-location"
                           value={location}
                           onChange={handleLocationChange}
-                          className="appearance-none w-full rounded-lg border border-slate-300 bg-white px-3.5 py-3 pr-10 text-[15px] font-medium shadow-sm transition focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-500/20"
+                          className="appearance-none w-full rounded-lg border border-slate-300 bg-white px-3.5 py-3 pr-10 text-[15px] font-medium shadow-sm transition focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/20"
                         >
                           {Object.entries(LOCATIONS).map(([key, l]) => (
                             <option key={key} value={key}>
@@ -462,7 +462,7 @@ export default function EstimatePage() {
                         htmlFor="nmpe-typology"
                         className="mb-1.5 flex items-center gap-2 text-sm font-semibold text-slate-700"
                       >
-                        <span className="grid h-5 w-5 place-items-center rounded bg-charcoal-900 text-[11px] font-bold text-white">
+                        <span className="grid h-5 w-5 place-items-center rounded bg-[#0c1524] text-[11px] font-bold text-white">
                           2
                         </span>{" "}
                         Project typology
@@ -472,7 +472,7 @@ export default function EstimatePage() {
                           id="nmpe-typology"
                           value={typology}
                           onChange={handleTypologyChange}
-                          className="appearance-none w-full rounded-lg border border-slate-300 bg-white px-3.5 py-3 pr-10 text-[15px] font-medium shadow-sm transition focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-500/20"
+                          className="appearance-none w-full rounded-lg border border-slate-300 bg-white px-3.5 py-3 pr-10 text-[15px] font-medium shadow-sm transition focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/20"
                         >
                           {Object.entries(TYPOLOGIES).map(([key, t]) => (
                             <option key={key} value={key}>
@@ -498,12 +498,12 @@ export default function EstimatePage() {
                         htmlFor="nmpe-gfa"
                         className="flex items-center gap-2 text-sm font-semibold text-slate-700"
                       >
-                        <span className="grid h-5 w-5 place-items-center rounded bg-charcoal-900 text-[11px] font-bold text-white">
+                        <span className="grid h-5 w-5 place-items-center rounded bg-[#0c1524] text-[11px] font-bold text-white">
                           3
                         </span>{" "}
                         Gross floor area (GFA)
                       </label>
-                      <div className="flex items-center rounded-lg border border-slate-300 shadow-sm transition focus-within:border-brand-500 focus-within:ring-4 focus-within:ring-brand-500/20">
+                      <div className="flex items-center rounded-lg border border-slate-300 shadow-sm transition focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/20">
                         <input
                           id="nmpe-gfa"
                           type="number"
@@ -557,7 +557,7 @@ export default function EstimatePage() {
 
                   <fieldset className="mt-6">
                     <legend className="mb-2 flex items-center gap-2 text-sm font-semibold text-slate-700">
-                      <span className="grid h-5 w-5 place-items-center rounded bg-charcoal-900 text-[11px] font-bold text-white">
+                      <span className="grid h-5 w-5 place-items-center rounded bg-[#0c1524] text-[11px] font-bold text-white">
                         4
                       </span>{" "}
                       Target finish standard
@@ -568,9 +568,9 @@ export default function EstimatePage() {
                         return (
                           <label
                             key={key}
-                            className={`nmpe-finish relative flex cursor-pointer flex-col rounded-xl border-2 p-4 transition hover:border-slate-300 focus-within:ring-4 focus-within:ring-brand-500/20 ${
+                            className={`nmpe-finish relative flex cursor-pointer flex-col rounded-xl border-2 p-4 transition hover:border-slate-300 focus-within:ring-4 focus-within:ring-blue-500/20 ${
                               isActive
-                                ? "border-brand-500 bg-brand-50"
+                                ? "border-blue-500 bg-blue-50"
                                 : "border-slate-200"
                             }`}
                           >
@@ -600,7 +600,7 @@ export default function EstimatePage() {
                   <button
                     id="nmpe-calc-btn"
                     type="submit"
-                    className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-brand-500/30 transition hover:bg-brand-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-500/40 active:scale-[.99]"
+                    className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/40 active:scale-[.99]"
                   >
                     <CalculatorIcon className="h-5 w-5" />
                     Calculate Estimate
@@ -619,7 +619,7 @@ export default function EstimatePage() {
                       <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500">
                         Live unit rates
                       </h2>
-                      <span className="rounded-md bg-charcoal-900 px-2 py-1 text-xs font-semibold text-white">
+                      <span className="rounded-md bg-[#0c1524] px-2 py-1 text-xs font-semibold text-white">
                         {loc.label}
                       </span>
                     </div>
@@ -691,20 +691,20 @@ export default function EstimatePage() {
           {/* ===== CTA banner (shown after calculation, before results) ===== */}
           {!showResults && estimate && (
             <div
-              className="nmpe-fade-in mt-6 overflow-hidden rounded-2xl bg-charcoal-900 shadow-card"
+              className="nmpe-fade-in mt-6 overflow-hidden rounded-2xl bg-[#0c1524] shadow-card"
               style={{ animationDelay: ".1s" }}
             >
               <div
                 className="h-1.5 w-full"
                 style={{
                   background:
-                    "repeating-linear-gradient(45deg,#F97316 0 14px,#111827 14px 28px)",
+                    "repeating-linear-gradient(45deg,#3b82f6 0 14px,#111827 14px 28px)",
                 }}
               />
               <div className="flex flex-col gap-6 p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
                 <div className="max-w-3xl">
                   <p className="text-base leading-relaxed text-slate-200 sm:text-lg">
-                    <span className="font-extrabold text-brand-400">
+                    <span className="font-extrabold text-blue-400">
                       ⚠️ Warning:
                     </span>{" "}
                     Market inflation and site material theft can erode up to{" "}
@@ -722,7 +722,7 @@ export default function EstimatePage() {
                   <p className="mt-3 text-sm text-slate-400">
                     On this estimate,{" "}
                     {Math.round(CONFIG.leakageRate * 100)}% leakage is roughly{" "}
-                    <strong className="text-brand-400">
+                    <strong className="text-blue-400">
                       {formatNaira(estimate.costs.atRisk)}
                     </strong>{" "}
                     at risk.
@@ -731,7 +731,7 @@ export default function EstimatePage() {
                 <a
                   href={CONFIG.signupUrl}
                   onClick={handleCtaClick}
-                  className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-brand-500 px-7 py-4 text-base font-extrabold text-white shadow-lg shadow-brand-500/40 transition hover:bg-brand-400 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-400/50 active:scale-[.99]"
+                  className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-blue-500 px-7 py-4 text-base font-extrabold text-white shadow-lg shadow-blue-500/40 transition hover:bg-blue-400 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-400/50 active:scale-[.99]"
                 >
                   Protect My Project Margins Now
                   <ArrowRightIcon className="h-5 w-5" />
@@ -750,7 +750,7 @@ export default function EstimatePage() {
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">
+                  <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
                     Estimated total project cost
                   </p>
                   <p
@@ -774,7 +774,7 @@ export default function EstimatePage() {
                     id="nmpe-download"
                     type="button"
                     onClick={handleDownloadCsv}
-                    className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-500/20"
+                    className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/20"
                   >
                     <DownloadIcon className="h-4 w-4" />
                     Download pricing matrix
@@ -783,7 +783,7 @@ export default function EstimatePage() {
                     id="nmpe-edit"
                     type="button"
                     onClick={handleEdit}
-                    className="inline-flex items-center gap-2 rounded-lg bg-charcoal-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-charcoal-800 focus:outline-none focus-visible:ring-4 focus-visible:ring-slate-400/40"
+                    className="inline-flex items-center gap-2 rounded-lg bg-[#0c1524] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-charcoal-800 focus:outline-none focus-visible:ring-4 focus-visible:ring-slate-400/40"
                   >
                     <EditIcon className="h-4 w-4" />
                     Adjust inputs
@@ -934,7 +934,7 @@ export default function EstimatePage() {
                     <div>
                       <p className="text-xs text-slate-500">Base total</p>
                       <p
-                        className="font-bold text-brand-600"
+                        className="font-bold text-blue-600"
                         id="nmpe-base-2"
                       >
                         {formatNairaCompact(estimate.costs.baseTotal)}
@@ -954,7 +954,7 @@ export default function EstimatePage() {
                         <div
                           style={{
                             width: `${(estimate.costs.cement / total) * 100}%`,
-                            backgroundColor: "#F97316",
+                            backgroundColor: "#3b82f6",
                           }}
                           title="Cement"
                         />
@@ -978,7 +978,7 @@ export default function EstimatePage() {
                               width: `${
                                 (estimate.costs.finishUplift / total) * 100
                               }%`,
-                              backgroundColor: "#FDBA74",
+                              backgroundColor: "#93c5fd",
                             }}
                             title="Finish uplift"
                           />
@@ -997,20 +997,20 @@ export default function EstimatePage() {
               </p>
 
               <div
-                className="nmpe-fade-in mt-6 overflow-hidden rounded-2xl bg-charcoal-900 shadow-card"
+                className="nmpe-fade-in mt-6 overflow-hidden rounded-2xl bg-[#0c1524] shadow-card"
                 style={{ animationDelay: ".1s" }}
               >
                 <div
                   className="h-1.5 w-full"
                   style={{
                     background:
-                      "repeating-linear-gradient(45deg,#F97316 0 14px,#111827 14px 28px)",
+                      "repeating-linear-gradient(45deg,#3b82f6 0 14px,#111827 14px 28px)",
                   }}
                 />
                 <div className="flex flex-col gap-6 p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
                   <div className="max-w-3xl">
                     <p className="text-base leading-relaxed text-slate-200 sm:text-lg">
-                      <span className="font-extrabold text-brand-400">
+                      <span className="font-extrabold text-blue-400">
                         ⚠️ Warning:
                       </span>{" "}
                       Market inflation and site material theft can erode up to{" "}
@@ -1029,7 +1029,7 @@ export default function EstimatePage() {
                       On this estimate,{" "}
                       {Math.round(CONFIG.leakageRate * 100)}% leakage is
                       roughly{" "}
-                      <strong className="text-brand-400">
+                      <strong className="text-blue-400">
                         {formatNaira(estimate.costs.atRisk)}
                       </strong>{" "}
                       at risk.
@@ -1038,7 +1038,7 @@ export default function EstimatePage() {
                   <a
                     href={CONFIG.signupUrl}
                     onClick={handleCtaClick}
-                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-brand-500 px-7 py-4 text-base font-extrabold text-white shadow-lg shadow-brand-500/40 transition hover:bg-brand-400 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-400/50 active:scale-[.99]"
+                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-blue-500 px-7 py-4 text-base font-extrabold text-white shadow-lg shadow-blue-500/40 transition hover:bg-blue-400 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-400/50 active:scale-[.99]"
                   >
                     Protect My Project Margins Now
                     <ArrowRightIcon className="h-5 w-5" />
@@ -1064,7 +1064,7 @@ export default function EstimatePage() {
               />
               <div className="relative flex min-h-full items-end justify-center p-0 sm:items-center sm:p-4">
                 <div className="nmpe-fade-in relative max-h-[100dvh] w-full overflow-y-auto rounded-t-2xl bg-white shadow-2xl sm:max-w-lg sm:rounded-2xl">
-                  <div className="h-1.5 w-full bg-brand-500" />
+                  <div className="h-1.5 w-full bg-blue-500" />
                   <button
                     type="button"
                     onClick={() => {
@@ -1072,7 +1072,7 @@ export default function EstimatePage() {
                       setTimeout(() => lastFocusRef.current?.focus(), 0);
                     }}
                     aria-label="Close"
-                    className="absolute right-3 top-4 rounded-lg p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-500/20"
+                    className="absolute right-3 top-4 rounded-lg p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/20"
                   >
                     <XIcon className="h-5 w-5" />
                   </button>
@@ -1121,7 +1121,7 @@ export default function EstimatePage() {
                           className={`w-full rounded-lg border px-3.5 py-3 text-[15px] shadow-sm transition focus:outline-none ${
                             leadErrors.fullName
                               ? "border-red-500 ring-red-500/15 focus:ring-4"
-                              : "border-slate-300 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20"
+                              : "border-slate-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
                           }`}
                           aria-describedby="nmpe-name-err"
                           aria-invalid={!!leadErrors.fullName}
@@ -1155,7 +1155,7 @@ export default function EstimatePage() {
                           className={`w-full rounded-lg border px-3.5 py-3 text-[15px] shadow-sm transition focus:outline-none ${
                             leadErrors.company
                               ? "border-red-500 ring-red-500/15 focus:ring-4"
-                              : "border-slate-300 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20"
+                              : "border-slate-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
                           }`}
                           aria-describedby="nmpe-company-err"
                           aria-invalid={!!leadErrors.company}
@@ -1181,7 +1181,7 @@ export default function EstimatePage() {
                           className={`flex rounded-lg border shadow-sm transition ${
                             leadErrors.whatsapp
                               ? "border-red-500 ring-red-500/15 focus-within:ring-4"
-                              : "border-slate-300 focus-within:border-brand-500 focus-within:ring-4 focus-within:ring-brand-500/20"
+                              : "border-slate-300 focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-500/20"
                           }`}
                         >
                           <span className="flex items-center gap-1.5 rounded-l-lg border-r border-slate-200 bg-slate-50 px-3 text-sm font-semibold text-slate-600">
@@ -1238,7 +1238,7 @@ export default function EstimatePage() {
                           className={`w-full rounded-lg border px-3.5 py-3 text-[15px] shadow-sm transition focus:outline-none ${
                             leadErrors.email
                               ? "border-red-500 ring-red-500/15 focus:ring-4"
-                              : "border-slate-300 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/20"
+                              : "border-slate-300 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20"
                           }`}
                           aria-describedby="nmpe-email-err"
                           aria-invalid={!!leadErrors.email}
@@ -1273,7 +1273,7 @@ export default function EstimatePage() {
                         id="nmpe-lead-submit"
                         type="submit"
                         disabled={isSubmitting}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-brand-500/30 transition hover:bg-brand-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-500/40 disabled:cursor-not-allowed disabled:opacity-70"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/40 disabled:cursor-not-allowed disabled:opacity-70"
                       >
                         {isSubmitting ? (
                           <>

@@ -13,7 +13,7 @@ export default function EstimatePage() {
   return (
     <SmoothScrollProvider>
       <Header />
-      <main className="min-h-screen bg-slate-100">
+      <main className="min-h-screen bg-white">
         <NigerianEstimationEngine />
       </main>
       <Footer />
