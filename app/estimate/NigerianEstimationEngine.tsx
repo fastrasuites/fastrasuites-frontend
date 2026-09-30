@@ -383,7 +383,7 @@ export default function EstimatePage() {
                 "repeating-linear-gradient(45deg,#3b82f6 0 12px,transparent 12px 24px)",
             }}
           />
-          <div className="relative mx-auto max-w-6xl px-5 py-7 sm:px-8 sm:py-9 text-white">
+          <div className="relative mx-auto max-w-7xl px-5 py-7 sm:px-8 sm:py-9 text-white">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400">
@@ -415,7 +415,7 @@ export default function EstimatePage() {
         </div>
       )}
       <section
-        className="mx-auto w-full max-w-6xl px-4 py-8 sm:py-12"
+        className="mx-auto w-full max-w-7xl px-4 py-8 sm:py-12"
         aria-labelledby="nmpe-title"
       >
           {!showResults && (
