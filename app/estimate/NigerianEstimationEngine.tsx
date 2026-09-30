@@ -425,7 +425,7 @@ export default function EstimatePage() {
         </div>
       )}
       <section
-        className="mx-auto w-full max-w-7xl px-4 py-8 sm:py-12"
+        className="mx-auto w-full max-w-7xl px-4 py-8 sm:py-12 bg-[#F9FAFB]"
         aria-labelledby="nmpe-title"
       >
           {!showResults && (
