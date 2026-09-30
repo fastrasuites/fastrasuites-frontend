@@ -14,7 +14,7 @@ export default function EstimatePage() {
     <SmoothScrollProvider>
       <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans antialiased overflow-x-hidden">
         <Header />
-        <main className="flex-1 bg-[#F9FAFB]">
+        <main className="flex-1 bg-white">
           <NigerianEstimationEngine />
         </main>
         <Footer />

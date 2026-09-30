@@ -83,9 +83,9 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-300 ${
         scrolled || mobileMenuOpen
-          ? "bg-[#0c1524]/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/25 py-3.5 sm:py-4"
+          ? "bg-[#0c1524] border-b border-white/10 shadow-lg shadow-black/25 py-3.5 sm:py-4"
           : "bg-transparent py-5 sm:py-6"
       }`}
     >
