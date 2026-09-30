@@ -375,7 +375,17 @@ export default function EstimatePage() {
     <>
       {/* Full-width dark navy hero strip — extends behind the fixed Header */}
       {!showResults && (
-        <div className="relative w-full bg-[#0c1524] pt-[80px] sm:pt-[96px]">
+        <div
+          className="relative w-full bg-[#0c1524] pt-[80px] sm:pt-[96px]"
+          style={{
+            backgroundImage: `linear-gradient(to right, #0c1524 35%, rgba(12, 21, 36, 0.6) 65%, rgba(12, 21, 36, 0.25) 90%), url('/hero_bg.jpg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "right top",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0c1524]/85 via-[#0c1524]/80 to-[#0c1524] pointer-events-none z-0" />
+          <div className="absolute inset-x-0 bottom-0 h-16 sm:h-20 bg-gradient-to-t from-[#0c1524] to-transparent pointer-events-none z-0" />
           <div
             className="pointer-events-none absolute inset-0 opacity-[.07]"
             style={{

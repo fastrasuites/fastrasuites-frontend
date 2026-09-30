@@ -12,11 +12,13 @@ export const metadata = {
 export default function EstimatePage() {
   return (
     <SmoothScrollProvider>
-      <Header />
-      <main className="min-h-screen bg-white">
-        <NigerianEstimationEngine />
-      </main>
-      <Footer />
+      <div className="flex flex-col min-h-screen bg-white text-gray-900 font-sans antialiased overflow-x-hidden">
+        <Header />
+        <main className="flex-1">
+          <NigerianEstimationEngine />
+        </main>
+        <Footer />
+      </div>
     </SmoothScrollProvider>
   );
 }
