@@ -247,7 +247,7 @@ export default function EstimatePage() {
     return true;
   }
 
-  function handleCalculate(e: React.FormEvent<HTMLFormElement>) {
+  function handleCalculate(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!validateGfa()) return;
     try {
@@ -316,7 +316,7 @@ export default function EstimatePage() {
     }
   }
 
-  async function handleLeadSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleLeadSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     if (isSubmitting) return;
 
