@@ -372,51 +372,54 @@ export default function EstimatePage() {
   ];
 
   return (
-        <section
-          className="mx-auto w-full max-w-6xl px-4 pt-[80px] py-8 sm:py-12"
-          aria-labelledby="nmpe-title"
-        >
+    <>
+      {/* Full-width dark navy hero strip — extends behind the fixed Header */}
+      {!showResults && (
+        <div className="relative w-full bg-[#0c1524] pt-[80px] sm:pt-[96px]">
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[.07]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg,#3b82f6 0 12px,transparent 12px 24px)",
+            }}
+          />
+          <div className="relative mx-auto max-w-6xl px-5 py-7 sm:px-8 sm:py-9 text-white">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400">
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />{" "}
+                  2026 Nigerian Market Benchmarks
+                </span>
+                <h1
+                  id="nmpe-title"
+                  className="mt-3 text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl lg:text-4xl"
+                >
+                  Dynamic Material Price &amp; Project Estimation Engine
+                </h1>
+                <p className="mt-2 max-w-2xl text-sm text-slate-300 sm:text-base">
+                  Location-adjusted cement, steel and sand quantities with
+                  a finish-level cost range for your next build.
+                </p>
+              </div>
+              <div className="flex shrink-0 items-center gap-2 text-xs text-slate-400">
+                <CheckIcon className="h-4 w-4 text-emerald-400" />
+                <span>
+                  Rates last reviewed:{" "}
+                  <strong className="text-slate-200">
+                    {formatRatesReviewed(CONFIG.ratesReviewedOn)}
+                  </strong>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      <section
+        className="mx-auto w-full max-w-6xl px-4 py-8 sm:py-12"
+        aria-labelledby="nmpe-title"
+      >
           {!showResults && (
             <>
-              <header className="mb-6 overflow-hidden rounded-2xl bg-[#0c1524] text-white shadow-card">
-                <div className="relative px-5 py-7 sm:px-8 sm:py-9">
-                  <div
-                    className="pointer-events-none absolute inset-0 opacity-[.07]"
-                    style={{
-                      backgroundImage:
-                        "repeating-linear-gradient(45deg,#3b82f6 0 12px,transparent 12px 24px)",
-                    }}
-                  />
-                  <div className="relative flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                    <div>
-                      <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400">
-                        <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />{" "}
-                        2026 Nigerian Market Benchmarks
-                      </span>
-                      <h1
-                        id="nmpe-title"
-                        className="mt-3 text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl lg:text-4xl"
-                      >
-                        Dynamic Material Price &amp; Project Estimation Engine
-                      </h1>
-                      <p className="mt-2 max-w-2xl text-sm text-slate-300 sm:text-base">
-                        Location-adjusted cement, steel and sand quantities with
-                        a finish-level cost range for your next build.
-                      </p>
-                    </div>
-                    <div className="flex shrink-0 items-center gap-2 text-xs text-slate-400">
-                      <CheckIcon className="h-4 w-4 text-emerald-400" />
-                      <span>
-                        Rates last reviewed:{" "}
-                        <strong className="text-slate-200">
-                          {formatRatesReviewed(CONFIG.ratesReviewedOn)}
-                        </strong>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </header>
-
               <div className="grid grid-cols-1 gap-6 lg:grid-cols-5">
                 <form
                   noValidate
@@ -1298,5 +1301,6 @@ export default function EstimatePage() {
             </div>
           )}
         </section>
-  );
+      </>
+    );
 }
