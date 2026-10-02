@@ -21,8 +21,9 @@ export default function PricingEstimateCta({
 }: Props) {
   return (
     <section
+      id="estimator"
       aria-labelledby="estimate-cta-title"
-      className="bg-white px-6 py-16"
+      className="bg-white px-6 py-16 scroll-mt-24"
     >
       <div className="mx-auto flex max-w-5xl flex-col items-start justify-between gap-8 rounded-2xl bg-[#0b2149] bg-[radial-gradient(circle_at_90%_10%,rgba(59,130,246,0.35),transparent_50%)] p-8 text-white md:flex-row md:items-center md:gap-10 md:p-12">
         <div className="max-w-xl flex-1">

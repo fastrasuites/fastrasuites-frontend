@@ -39,7 +39,12 @@ export default function SmoothScrollProvider({
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest("a");
-      if (anchor && anchor.hash && anchor.origin === window.location.origin) {
+      if (
+        anchor &&
+        anchor.hash &&
+        anchor.origin === window.location.origin &&
+        anchor.pathname === window.location.pathname
+      ) {
         const targetElement = document.querySelector<HTMLElement>(anchor.hash);
         if (targetElement) {
           e.preventDefault();
@@ -52,6 +57,19 @@ export default function SmoothScrollProvider({
     };
 
     document.addEventListener("click", handleAnchorClick);
+
+    // Scroll to hash on load if present in URL
+    if (typeof window !== "undefined" && window.location.hash) {
+      setTimeout(() => {
+        const targetElement = document.querySelector<HTMLElement>(window.location.hash);
+        if (targetElement) {
+          lenis.scrollTo(targetElement, {
+            offset: -80,
+            duration: 1.2,
+          });
+        }
+      }, 300);
+    }
 
     return () => {
       document.removeEventListener("click", handleAnchorClick);
