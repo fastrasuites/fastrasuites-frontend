@@ -13,7 +13,9 @@ type FeatureItem = {
 };
 
 export default function PricingCards() {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
+    "monthly",
+  );
 
   const starterFeatures: FeatureItem[] = [
     { text: "Up to 3 active projects", highlight: "3 active projects" },
@@ -32,8 +34,8 @@ export default function PricingCards() {
 
   const proFeatures: FeatureItem[] = [
     { text: "Everything in Starter", bold: true },
-    { text: "Up to 15 active projects", highlight: "15 active projects" },
-    { text: "Up to 25 users", highlight: "25 users" },
+    { text: "Up to 10 active projects", highlight: "10 active projects" },
+    { text: "Up to 15 users", highlight: "15 users" },
     { text: "Up to 3 warehouses" },
     { text: "Advanced approval workflows" },
     { text: "Advanced procurement and inventory" },
@@ -100,12 +102,13 @@ export default function PricingCards() {
         <FadeIn delay={0.15} distance={15}>
           <div className="text-gray-500 text-[14.5px] sm:text-[15.5px] leading-relaxed max-w-3xl mx-auto text-center mb-3 text-balance font-normal">
             <p className="mb-1">
-              Choose the plan that fits your projects. Upgrade as you grow. Manage your projects, costs,
-              people, procurement, and inventory from one connected platform.
+              Choose the plan that fits your projects. Upgrade as you grow.
+              Manage your projects, costs, people, procurement, and inventory
+              from one connected platform.
             </p>
             <p>
-              Start with the plan that fits your business today and move to a higher plan as your projects
-              and team grow.
+              Start with the plan that fits your business today and move to a
+              higher plan as your projects and team grow.
             </p>
           </div>
         </FadeIn>
@@ -122,14 +125,20 @@ export default function PricingCards() {
           <div className="flex items-center justify-center gap-3.5 mb-16">
             <span
               className={`text-sm font-semibold transition-colors cursor-pointer select-none ${
-                billingCycle === "monthly" ? "text-[#2563EB]" : "text-gray-400 hover:text-gray-600"
+                billingCycle === "monthly"
+                  ? "text-[#2563EB]"
+                  : "text-gray-400 hover:text-gray-600"
               }`}
               onClick={() => setBillingCycle("monthly")}
             >
               Monthly
             </span>
             <button
-              onClick={() => setBillingCycle(billingCycle === "monthly" ? "yearly" : "monthly")}
+              onClick={() =>
+                setBillingCycle(
+                  billingCycle === "monthly" ? "yearly" : "monthly",
+                )
+              }
               className="w-13 h-7 rounded-full p-0.5 border-2 border-[#2563EB] flex items-center transition-colors focus:outline-hidden cursor-pointer relative bg-white shadow-xs"
               aria-label="Toggle billing cycle"
             >
@@ -141,7 +150,9 @@ export default function PricingCards() {
             </button>
             <span
               className={`text-sm font-semibold transition-colors cursor-pointer select-none ${
-                billingCycle === "yearly" ? "text-[#2563EB]" : "text-gray-400 hover:text-gray-600"
+                billingCycle === "yearly"
+                  ? "text-[#2563EB]"
+                  : "text-gray-400 hover:text-gray-600"
               }`}
               onClick={() => setBillingCycle("yearly")}
             >
@@ -183,7 +194,10 @@ export default function PricingCards() {
                 </span>
               </div>
 
-              <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}>
+              <motion.div
+                whileHover={{ scale: 1.015 }}
+                whileTap={{ scale: 0.985 }}
+              >
                 <Link
                   href="https://app.fastrasuite.com/"
                   className="block w-full py-3.5 px-4 rounded-xl text-[14.5px] font-semibold text-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white transition-all shadow-md shadow-blue-500/20 active:scale-[0.98] mb-8"
@@ -219,7 +233,9 @@ export default function PricingCards() {
                 Coming Soon
               </div>
 
-              <h3 className="text-xl font-bold text-[#111827] mb-1 mt-1">Professional</h3>
+              <h3 className="text-xl font-bold text-[#111827] mb-1 mt-1">
+                Professional
+              </h3>
               <p className="text-gray-500 text-[13px] leading-relaxed mb-6 min-h-[38px]">
                 For growing contractors managing multiple projects
               </p>
@@ -243,12 +259,15 @@ export default function PricingCards() {
                 </span>
               </div>
 
-              <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}>
+              <motion.div
+                whileHover={{ scale: 1.015 }}
+                whileTap={{ scale: 0.985 }}
+              >
                 <Link
                   href="/contact"
                   className="block w-full py-3.5 px-4 rounded-xl text-[14.5px] font-semibold text-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white transition-all shadow-md shadow-blue-500/30 hover:shadow-blue-500/50 active:scale-[0.98] mb-8"
                 >
-                  Coming Soon
+                  Select
                 </Link>
               </motion.div>
 
@@ -276,39 +295,29 @@ export default function PricingCards() {
             >
               {/* Coming Soon Badge */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#2563EB] text-white text-[11px] font-bold px-4 py-1 rounded-full shadow-md tracking-wider uppercase">
-                Coming Soon
+                Contact Us
               </div>
 
-              <h3 className="text-xl font-bold text-[#111827] mb-1 mt-1">Enterprise</h3>
+              <h3 className="text-xl font-bold text-[#111827] mb-1 mt-1">
+                Enterprise
+              </h3>
               <p className="text-gray-500 text-[13px] leading-relaxed mb-6 min-h-[38px]">
-                For large contractors and organizations with complex project operations
+                For large contractors and organizations with complex project
+                operations
               </p>
 
               {/* Price display with animated flip */}
-              <div className="flex items-baseline gap-1.5 mb-7 h-10">
-                <AnimatePresence mode="wait">
-                  <motion.span
-                    key={billingCycle}
-                    initial={{ opacity: 0, y: -6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 6 }}
-                    transition={{ duration: 0.18 }}
-                    className="text-3xl sm:text-[34px] font-extrabold text-[#111827] tracking-tight"
-                  >
-                    {billingCycle === "monthly" ? "₦399,000" : "₦3,990,000"}
-                  </motion.span>
-                </AnimatePresence>
-                <span className="text-gray-500 text-sm font-normal">
-                  {billingCycle === "monthly" ? "/month" : "/year"}
-                </span>
-              </div>
+              <div className="flex items-baseline gap-1.5 mb-7 h-10"></div>
 
-              <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}>
+              <motion.div
+                whileHover={{ scale: 1.015 }}
+                whileTap={{ scale: 0.985 }}
+              >
                 <Link
                   href="/contact"
                   className="block w-full py-3.5 px-4 rounded-xl text-[14.5px] font-semibold text-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white transition-all shadow-md shadow-blue-500/20 active:scale-[0.98] mb-8"
                 >
-                  Coming Soon
+                  Contact Us
                 </Link>
               </motion.div>
 
@@ -345,7 +354,9 @@ export default function PricingCards() {
                   Your business can grow without outgrowing the platform.
                 </h4>
                 <p className="text-gray-500 text-[13.5px] leading-relaxed mb-6">
-                  If you need more users, projects or operational capacity than your current plan provides, you can upgrade to the next plan or contact us for additional capacity.
+                  If you need more users, projects or operational capacity than
+                  your current plan provides, you can upgrade to the next plan
+                  or contact us for additional capacity.
                 </p>
               </div>
               <Link
@@ -373,7 +384,9 @@ export default function PricingCards() {
                   We don&apos;t charge you for every transaction.
                 </h4>
                 <p className="text-gray-500 text-[13.5px] leading-relaxed">
-                  Create more requests. Process more materials. Manage more costs. Use the platform without worrying about per-transaction charges.
+                  Create more requests. Process more materials. Manage more
+                  costs. Use the platform without worrying about per-transaction
+                  charges.
                 </p>
               </div>
             </motion.div>

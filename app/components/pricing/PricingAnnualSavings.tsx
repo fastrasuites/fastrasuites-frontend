@@ -19,8 +19,8 @@ export default function PricingAnnualSavings() {
     },
     {
       plan: "Enterprise",
-      monthly: "₦399,000 / month",
-      yearly: "₦3,990,000 / year",
+      // monthly: "₦399,000 / month",
+      // yearly: "₦3,990,000 / year",
     },
   ];
 
@@ -74,9 +74,15 @@ export default function PricingAnnualSavings() {
                   key={idx}
                   className="grid grid-cols-3 py-4 sm:py-5 px-4 sm:px-8 text-xs sm:text-sm font-medium items-center hover:bg-white/[0.02] transition-colors"
                 >
-                  <div className="text-left font-bold text-white">{item.plan}</div>
-                  <div className="text-center text-gray-300">{item.monthly}</div>
-                  <div className="text-right text-blue-300 font-semibold">{item.yearly}</div>
+                  <div className="text-left font-bold text-white">
+                    {item.plan}
+                  </div>
+                  <div className="text-center text-gray-300">
+                    {item.monthly}
+                  </div>
+                  <div className="text-right text-blue-300 font-semibold">
+                    {item.yearly}
+                  </div>
                 </div>
               ))}
             </div>
@@ -85,8 +91,12 @@ export default function PricingAnnualSavings() {
 
         <FadeIn delay={0.25} distance={15}>
           <p className="text-gray-400 text-xs sm:text-sm mt-8">
-            Contact us for custom enterprise pricing with dedicated support & SLA agreements{" "}
-            <Link href="/contact" className="text-blue-400 hover:underline ml-1">
+            Contact us for custom enterprise pricing with dedicated support &
+            SLA agreements{" "}
+            <Link
+              href="/contact"
+              className="text-blue-400 hover:underline ml-1"
+            >
               Contact Sales →
             </Link>
           </p>
