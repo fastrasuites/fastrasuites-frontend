@@ -33,16 +33,16 @@ export default function Footer() {
               Contact:
             </span>
             <Link
-              href="tel:18001234567"
+              href="tel:+2348089892733"
               className="hover:text-white hover:underline transition-all"
             >
-              1800 123 4567
+              +234 808 989 2733
             </Link>
             <Link
-              href="mailto:email@example.com"
+              href="mailto:info@fastrasuite.com"
               className="hover:text-white hover:underline transition-all"
             >
-              email@example.com
+              info@fastrasuite.com
             </Link>
           </div>
 
