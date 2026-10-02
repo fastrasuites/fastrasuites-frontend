@@ -93,7 +93,7 @@ export default function Hero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative bg-[#0c1524] text-white pt-[74px] sm:pt-[82px] pb-0 overflow-hidden min-h-[620px] sm:min-h-[680px] lg:min-h-[680px] flex flex-col justify-between"
+      className="relative bg-[#0c1524] text-white pt-24 sm:pt-28 md:pt-32 pb-0 overflow-hidden px-4 sm:px-6 md:px-12 lg:pr-0 min-h-[620px] sm:min-h-[680px] lg:min-h-[680px] flex flex-col justify-between"
     >
       {/* 1. Desktop Exact Background Image Layer (lg: 1024px+ - 100% UNCHANGED) */}
       <motion.div
@@ -174,69 +174,67 @@ export default function Hero() {
       <div className="absolute inset-x-0 top-0 h-24 sm:h-28 bg-gradient-to-b from-[#0c1524]/80 to-transparent pointer-events-none z-0" />
       <div className="absolute inset-x-0 bottom-0 h-16 sm:h-20 bg-gradient-to-t from-[#0c1524] to-transparent pointer-events-none z-0" />
 
-      {/* Top Announcement Ribbon - End to End, No Rounded Corners */}
+      {/* Top Announcement Ribbon - Floating Dribbble Style with Rounded Corners */}
       <AnimatePresence>
         {ribbonVisible && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0, transition: { duration: 0.25 } }}
-            transition={{ duration: 0.4, ease: EASING.smooth }}
-            className="w-full relative z-30 overflow-hidden"
+            initial={{ opacity: 0, y: -16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12, height: 0, marginBottom: 0, transition: { duration: 0.25 } }}
+            transition={{ duration: 0.45, ease: EASING.smooth }}
+            className="w-full max-w-5xl mx-auto mb-4 sm:mb-6 lg:mb-8 relative z-30"
           >
-            <div className="w-full rounded-none bg-gradient-to-r from-[#0a182e] via-[#0f2444] to-[#0a182e] border-y border-blue-500/25 px-4 sm:px-6 md:px-12 py-2.5 sm:py-3 shadow-[0_4px_24px_rgba(0,0,0,0.35)] backdrop-blur-md transition-colors">
-              <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-                {/* Ribbon Content (Left & Center) */}
+            <div className="relative flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 bg-gradient-to-r from-blue-950/85 via-[#102546]/90 to-blue-950/85 border border-blue-500/35 hover:border-blue-400/60 rounded-2xl sm:rounded-full py-2.5 px-4 sm:px-6 shadow-[0_4px_24px_rgba(59,130,246,0.18)] backdrop-blur-md transition-all group">
+              {/* Ribbon Content (Left & Center) */}
+              <Link
+                href="/estimate"
+                className="flex-1 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start gap-1.5 sm:gap-2 text-center sm:text-left text-xs sm:text-[13.5px] cursor-pointer"
+              >
+                <span className="font-bold text-white group-hover:text-blue-300 transition-colors">
+                  Project Cost Estimator:
+                </span>
+                <span className="text-gray-200 group-hover:text-white transition-colors">
+                  Get a realistic budget built on current Nigerian material and labor prices 🚧
+                </span>
+              </Link>
+
+              {/* Action Button & Close Button (Right) */}
+              <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
                 <Link
-                  href="/pricing#estimator"
-                  className="flex-1 flex flex-wrap sm:flex-nowrap items-center justify-center sm:justify-start gap-1.5 sm:gap-2 text-center sm:text-left text-xs sm:text-[13.5px] group cursor-pointer"
+                  href="/estimate"
+                  className="inline-flex items-center gap-1.5 bg-white hover:bg-gray-100 text-[#0c1524] font-bold text-xs sm:text-[13px] px-4 py-1.5 rounded-full shadow-sm hover:shadow transition-all active:scale-95 group/btn"
                 >
-                  <span className="font-bold text-white group-hover:text-blue-300 transition-colors">
-                    Project Cost Estimator:
-                  </span>
-                  <span className="text-gray-200 group-hover:text-white transition-colors">
-                    Get a realistic budget built on current Nigerian material and labor prices 🚧
-                  </span>
+                  <span>Try Estimator</span>
+                  <svg
+                    className="w-3.5 h-3.5 stroke-[2.5] transition-transform group-hover/btn:translate-x-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
 
-                {/* Action Button & Close Button (Right) */}
-                <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-                  <Link
-                    href="/pricing#estimator"
-                    className="inline-flex items-center gap-1.5 bg-white hover:bg-gray-100 text-[#0c1524] font-bold text-xs sm:text-[13px] px-4 py-1.5 rounded-full shadow-sm hover:shadow transition-all active:scale-95 group/btn"
-                  >
-                    <span>Try Estimator</span>
-                    <svg
-                      className="w-3.5 h-3.5 stroke-[2.5] transition-transform group-hover/btn:translate-x-0.5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-
-                  <button
-                    type="button"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setRibbonVisible(false);
-                    }}
-                    className="text-gray-400 hover:text-white transition-colors p-1 rounded-full hover:bg-white/10"
-                    aria-label="Dismiss announcement ribbon"
-                  >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setRibbonVisible(false);
+                  }}
+                  className="text-gray-400 hover:text-white transition-colors p-1 rounded-full hover:bg-white/10"
+                  aria-label="Dismiss announcement ribbon"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <div className="max-w-7xl ml-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 items-end relative z-10 px-4 sm:px-6 md:px-12 lg:pl-12 lg:pr-0 pt-4 sm:pt-6 lg:pt-8">
+      <div className="max-w-7xl ml-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 items-end relative z-10 pt-2 sm:pt-4">
         {/* Left Column: Headline and Content */}
         <motion.div
           variants={containerVariants}
